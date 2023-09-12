@@ -1,6 +1,6 @@
-# Real estate and construction web app - A real estate and construction app
+# Real estate and construction web app
 
-> Damlf Multiventured App built with Sanity and Next.js13.
+> Damlf Multiventures App built with Sanity and Next.js13.
 
 ### Install Dependencies
 

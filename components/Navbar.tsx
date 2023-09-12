@@ -16,7 +16,7 @@ export default function Navbar() {
             key={nav.id}
             className={`cursor-pointer text-lg ${
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
-            } font-bold text-white`}
+            } font-medium text-white`}
           >
             <Link href={`${nav.page}`}>{nav.title}</Link>
           </li>
