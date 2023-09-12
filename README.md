@@ -1,6 +1,6 @@
-# Job Board App - A job application portal where users can apply for jobs.
+# Real estate and construction web app - A real estate and construction app
 
-> Job Board App built with Sanity and Next.js13.
+> Damlf Multiventured App built with Sanity and Next.js13.
 
 ### Install Dependencies
 
