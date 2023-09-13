@@ -1,10 +1,10 @@
-// sanity/schema.ts
-
 import { type SchemaTypeDefinition } from 'sanity';
-import job from './schemas/job';
+import rent from './schemas/rent';
+import buy from './schemas/buy';
+import author from './schemas/author';
+import category from './schemas/category';
 import blockContent from './schemas/blockContent';
-import postedBy from './schemas/postedBy';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [job, blockContent, postedBy],
+  types: [rent, blockContent, buy, author, category],
 };
