@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.properties {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-10 py-10 pb-20 md:px-0 px-20;
+}
+
 @layer components {
   .blueGradient {
     background: linear-gradient(

@@ -8,9 +8,10 @@ type Property = {
   location: string;
   datePosted: string;
   description: string;
-  salary: string;
+  price: string;
+  categories: string;
   _createdAt: Date;
   slug: string;
-  companyLogo: string;
+  mainImage: string;
   body: PortableTextBlock[];
 };
