@@ -29,6 +29,10 @@ export default function PropertyList({ properties }: Props) {
             </h5>
 
             <p className='mb-3 font-normal text-gray-300 dark:text-gray-400'>
+              {property.title}
+            </p>
+
+            <p className='mb-3 font-normal text-gray-300 dark:text-gray-400'>
               {property.description}
             </p>
           </div>
