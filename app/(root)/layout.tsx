@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${manrope.className} bg-deepColor`}>
+      <body className={`${manrope.className} bg-[#0F172A]`}>
         <Navbar />
         {/* Adjust for larger screens */}
         <main>{children}</main>
