@@ -19,7 +19,7 @@
   .pinkGradient {
     background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
     /* filter: blur(900px); */
-    filter: blur(600px);
+    filter: blur(500px);
   }
   .whiteGradient {
     background: rgba(255, 255, 255, 0.8);
