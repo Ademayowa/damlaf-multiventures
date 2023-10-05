@@ -2,8 +2,8 @@ import { defineField, defineType } from 'sanity';
 import { HomeIcon } from '@sanity/icons';
 
 export default defineType({
-  name: 'rent',
-  title: 'Rent',
+  name: 'property',
+  title: 'Property',
   type: 'document',
   icon: HomeIcon,
   fields: [
@@ -32,14 +32,14 @@ export default defineType({
       type: 'text',
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
+      name: 'agent',
+      title: 'Agent',
       type: 'reference',
-      to: { type: 'author' },
+      to: { type: 'agent' },
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -53,10 +53,13 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }],
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
+      options: {
+        list: ['all', 'rent', 'buy', 'lease'],
+      },
     }),
     defineField({
       name: 'publishedAt',
@@ -70,15 +73,15 @@ export default defineType({
     }),
   ],
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const { author } = selection;
-      return { ...selection, subtitle: author && `by ${author}` };
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: 'title',
+  //     author: 'author.name',
+  //     media: 'poster',
+  //   },
+  //   prepare(selection) {
+  //     const { author } = selection;
+  //     return { ...selection, subtitle: author && `by ${author}` };
+  //   },
+  // },
 });

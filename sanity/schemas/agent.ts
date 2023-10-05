@@ -1,11 +1,11 @@
 import { defineField, defineType } from 'sanity';
-import { BookIcon } from '@sanity/icons';
+import { PlugIcon } from '@sanity/icons';
 
 export default defineType({
-  name: 'author',
-  title: 'Author',
+  name: 'agent',
+  title: 'Agent',
   type: 'document',
-  icon: BookIcon,
+  icon: PlugIcon,
   fields: [
     defineField({
       name: 'name',

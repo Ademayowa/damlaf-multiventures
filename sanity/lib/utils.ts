@@ -24,15 +24,14 @@ export async function getProperties(): Promise<Property[]> {
 }
 
 //👉 Get single job
-export async function getProperty(slug: string): Promise<Property> {
+export async function getProperty(slug: string) {
   return client.fetch(
     groq`
-    *[_type == "job" && slug.current == $slug][0] {
+    *[_type == "property" && slug.current == $slug][0] {
       _id,
-      _createdAt,
       title,
       "slug":slug.current,
-      "companyLogo": companyLogo.asset->url, 
+      "mainImage": mainImage.asset->url, 
      body
     }`,
     { slug }
