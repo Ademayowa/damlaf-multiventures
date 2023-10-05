@@ -19,7 +19,7 @@ const Header = ({ query, category }: Props) => {
 
   if (category) {
     return (
-      <h1 className='self-start text-white'>
+      <h1 className='self-start text-white mt-10'>
         <span className='capitalize'>{category} Properties</span>
       </h1>
     );

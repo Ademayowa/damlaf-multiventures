@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { formUrlQuery } from '@/sanity/schemas/utils';
 
-const links = ['All', 'Buying', 'Renting', 'Selling'];
+const links = ['All', 'Buy', 'Rent', 'Sell'];
 
 const Filters = () => {
   const [active, setActive] = useState('');
@@ -36,7 +36,7 @@ const Filters = () => {
   };
 
   return (
-    <ul className='text-white no-scrollbar text-lg font-semibold flex justify-center w-full mx-auto overflow-auto py-5'>
+    <ul className='text-white no-scrollbar text-center text-lg font-semibold w-full overflow-auto py-5'>
       {links.map((link) => (
         <button
           key={link}

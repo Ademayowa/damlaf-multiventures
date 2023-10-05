@@ -34,7 +34,7 @@ export default async function HomePage({ searchParams }: Props) {
         </div>
       </div>
 
-      <div>
+      <div className='px-5 text-center'>
         <SectionTitle title='Latest Properties' />
         <Filters />
       </div>
