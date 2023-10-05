@@ -6,6 +6,7 @@ import { PortableText } from '@portabletext/react';
 
 import { client } from '@/sanity/lib/client';
 import { urlForImage } from '@/sanity/lib/image';
+import EnquiryForm from '@/components/EnquiryForm';
 
 type Props = {
   params: {
@@ -21,33 +22,46 @@ async function Property({ params: { slug } }: Props) {
   }`;
 
   const property = await client.fetch(query, { slug });
-  console.log(property);
 
   return (
     <>
-      <div className='flex gap-5 md:flex-row flex-col justify-between my-20 px-10 relative'>
-        <div className='text-white flex flex-col max-w-2xl border border-stone-800 rounded-md p-4'>
-          <h2 className='text-2xl font-bold'>About Property</h2>
-          <div className='mb-3 text-lg'>
-            <PortableText value={property.body}></PortableText>
+      <div className='flex gap-14 md:flex-row flex-col justify-between my-10 px-5 md:px-20 relative'>
+        <div className='flex flex-col w-full lg:w-3/5 rounded-md'>
+          <Image
+            src={urlForImage(property.image).url()}
+            alt={property.title}
+            width={1000}
+            height={1000}
+            className='rounded-md'
+          />
+
+          <div className='text-white'>
+            <h2 className='mt-8 font-normal'>For Rent</h2>
+            <h3 className='text-[32px] font-bold text-[#8391A6] my-3'>
+              $ 1,800 <span className='text-base font-normal'>/month</span>
+            </h3>
+
+            <div className='flex space-x-9 my-3'>
+              <p className='font-bold'>
+                3 <span className='font-normal ml-1'>bed</span>
+              </p>
+              <p className='font-bold'>
+                2<span className='font-normal ml-1'> bath</span>
+              </p>
+              <p className='font-bold'>
+                1,266
+                <span className='font-normal ml-1'>sqft</span>
+              </p>
+            </div>
+
+            <p className='text-xl tracking-wider'>
+              Talbot Mobile Home Ave Unit C13, Canutillo, TX 79835
+            </p>
           </div>
         </div>
 
-        <div className='text-white flex flex-col max-w-2xl border border-stone-800 rounded-md p-4'>
-          <div className='grid place-items-center'>
-            <h2 className='font-bold'>Contact Agent: Ahsan Zain Eddin</h2>
-            <Image
-              src={urlForImage(property.image).url()}
-              alt={property.title}
-              width={100}
-              height={100}
-              className='rounded-full mt-5'
-            />
-
-            <p className='mt-5'>Your Keys Holiday Homes</p>
-            <p>Call: +971589159379</p>
-            <button>Message</button>
-          </div>
+        <div className='text-white flex flex-col w-full rounded-md lg:w-2/5'>
+          <EnquiryForm />
         </div>
       </div>
     </>
