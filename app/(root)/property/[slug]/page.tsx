@@ -23,8 +23,6 @@ async function Property({ params: { slug } }: Props) {
 
   const property = await client.fetch(query, { slug });
 
-  console.log(property);
-
   return (
     <div className='mb-10 px-5 md:px-20 mt-10 md:mt-20'>
       <div className='flex gap-14 md:flex-row flex-col justify-between'>

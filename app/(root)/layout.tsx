@@ -19,7 +19,6 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${manrope.className} bg-[#0F172A]`}>
         <Navbar />
-        {/* Adjust for larger screens */}
         <main className='max-w-7xl mx-auto'>{children}</main>
       </body>
     </html>
