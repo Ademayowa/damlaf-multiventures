@@ -58,8 +58,27 @@ export default defineType({
       type: 'string',
       validation: (Rule: any) => Rule.required(),
       options: {
-        list: ['all', 'rent', 'buy', 'lease'],
+        list: ['all', 'rent', 'buy', 'sell'],
       },
+    }),
+    defineField({
+      name: 'feature',
+      title: 'propertyFeature',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
+      options: {
+        list: ['3', '2', '1,266'],
+      },
+    }),
+    defineField({
+      name: 'address',
+      title: 'Address',
+      type: 'string',
+    }),
+    defineField({
+      name: 'details',
+      title: 'propertyDetails',
+      type: 'text',
     }),
     defineField({
       name: 'publishedAt',

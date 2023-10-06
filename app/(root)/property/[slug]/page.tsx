@@ -23,9 +23,11 @@ async function Property({ params: { slug } }: Props) {
 
   const property = await client.fetch(query, { slug });
 
+  console.log(property);
+
   return (
-    <>
-      <div className='flex gap-14 md:flex-row flex-col justify-between my-10 px-5 md:px-20 relative'>
+    <div className='my-10 px-5 md:px-20'>
+      <div className='flex gap-14 md:flex-row flex-col justify-between'>
         <div className='flex flex-col w-full lg:w-3/5 rounded-md'>
           <Image
             src={urlForImage(property.image).url()}
@@ -35,9 +37,9 @@ async function Property({ params: { slug } }: Props) {
             className='rounded-md'
           />
 
-          <div className='text-white'>
-            <h2 className='mt-8 font-normal'>For Rent</h2>
-            <h3 className='text-[32px] font-bold text-[#8391A6] my-3'>
+          <div className='text-[#8391A6]'>
+            <h2 className='mt-8 font-normal text-white'>For Rent</h2>
+            <h3 className='text-[32px] font-bold my-3'>
               $ 1,800 <span className='text-base font-normal'>/month</span>
             </h3>
 
@@ -54,9 +56,7 @@ async function Property({ params: { slug } }: Props) {
               </p>
             </div>
 
-            <p className='text-xl tracking-wider'>
-              Talbot Mobile Home Ave Unit C13, Canutillo, TX 79835
-            </p>
+            <p className='text-xl tracking-wider'>{property.address}</p>
           </div>
         </div>
 
@@ -64,7 +64,16 @@ async function Property({ params: { slug } }: Props) {
           <EnquiryForm />
         </div>
       </div>
-    </>
+
+      <div className='max-w-2xl my-8'>
+        <hr />
+      </div>
+
+      <div className='text-[#8391A6]'>
+        <h3 className='text-xl font-bold'>Property Details</h3>
+        <p className='max-w-2xl mt-4 tracking-wider'>{property.details}</p>
+      </div>
+    </div>
   );
 }
 
