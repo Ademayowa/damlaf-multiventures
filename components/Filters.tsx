@@ -42,9 +42,7 @@ const Filters = () => {
           key={link}
           onClick={() => handleFilter(link)}
           className={`${
-            active === link
-              ? 'bg-blueColor'
-              : 'border border-slate-500 hover:border-blueColor'
+            active === link ? 'bg-blueColor' : 'border border-slate-500'
           } whitespace-nowrap rounded-md px-4 py-2 capitalize`}
         >
           {link}
