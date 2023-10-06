@@ -1,9 +1,11 @@
 import { defineField, defineType } from 'sanity';
+import { PlugIcon } from '@sanity/icons';
 
 export default defineType({
-  name: 'postedBy',
-  title: 'PostedBy',
+  name: 'agent',
+  title: 'Agent',
   type: 'document',
+  icon: PlugIcon,
   fields: [
     defineField({
       name: 'name',

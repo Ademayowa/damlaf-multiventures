@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className='px-20 bg flex items-center py-5'>
+    <nav className='md:px-20 px-5 flex items-center pt-8 pb-5 max-w-7xl mx-auto'>
       <Link href='/'>
         {/* <Image src='/damlaf-logo.png' alt='logo' width={200} height={200} /> */}
         <p className='text-2xl font-bold text-white'>Damlaf Multiventures</p>
@@ -16,7 +16,7 @@ export default function Navbar() {
             key={nav.id}
             className={`cursor-pointer text-lg ${
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
-            } font-bold text-white`}
+            } font-medium text-white`}
           >
             <Link href={`${nav.page}`}>{nav.title}</Link>
           </li>

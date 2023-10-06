@@ -10,8 +10,13 @@ export const navLinks = [
     page: '/',
   },
   {
-    id: 'property',
-    title: 'Property',
+    id: 'buy',
+    title: 'Buy',
+    page: '/',
+  },
+  {
+    id: 'rent',
+    title: 'Rent',
     page: '/',
   },
 ];

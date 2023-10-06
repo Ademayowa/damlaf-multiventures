@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.properties {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-10 pt-3 pb-20 md:px-0 px-20;
+}
+
 @layer components {
   .blueGradient {
     background: linear-gradient(
@@ -9,14 +13,17 @@
       rgba(188, 165, 255, 0) 0%,
       #214d76 100%
     );
-    filter: blur(123px);
+    /* filter: blur(123px); */
+    filter: blur(800px);
   }
   .pinkGradient {
     background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-    filter: blur(900px);
+    /* filter: blur(900px); */
+    filter: blur(500px);
   }
   .whiteGradient {
-    background: rgba(255, 255, 255, 0.6);
-    filter: blur(750px);
+    background: rgba(255, 255, 255, 0.8);
+    /* filter: blur(750px); */
+    filter: blur(800px);
   }
 }
