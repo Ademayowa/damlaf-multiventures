@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .properties {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 pt-3 pb-20 md:px-0 px-5;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 pt-3 pb-20 md:px-0 px-5;
 }
 
 @layer components {
