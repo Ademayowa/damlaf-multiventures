@@ -36,14 +36,16 @@ const Filters = () => {
   };
 
   return (
-    <ul className='text-white no-scrollbar text-center lg:text-lg font-semibold w-full overflow-auto py-5'>
+    <ul className='text-white no-scrollbar flex space-x-2 justify-center lg:text-lg font-semibold w-full overflow-auto py-5'>
       {links.map((link) => (
         <button
           key={link}
           onClick={() => handleFilter(link)}
           className={`${
-            active === link ? 'bg-blueColor' : ''
-          } whitespace-nowrap rounded-md px-8 py-2 capitalize`}
+            active === link
+              ? 'bg-blueColor'
+              : 'border border-stone-500 hover:border-blueColor'
+          } whitespace-nowrap rounded-md px-4 py-2 capitalize`}
         >
           {link}
         </button>
