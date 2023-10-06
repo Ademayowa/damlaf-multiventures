@@ -44,7 +44,7 @@ const Filters = () => {
           className={`${
             active === link
               ? 'bg-blueColor'
-              : 'border border-stone-500 hover:border-blueColor'
+              : 'border border-slate-500 hover:border-blueColor'
           } whitespace-nowrap rounded-md px-4 py-2 capitalize`}
         >
           {link}
