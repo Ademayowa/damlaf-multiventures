@@ -36,7 +36,7 @@ const Filters = () => {
   };
 
   return (
-    <ul className='text-white no-scrollbar text-center text-lg font-semibold w-full overflow-auto py-5'>
+    <ul className='text-white no-scrollbar text-center lg:text-lg font-semibold w-full overflow-auto py-5'>
       {links.map((link) => (
         <button
           key={link}

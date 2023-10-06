@@ -24,7 +24,7 @@ export default async function HomePage({ searchParams }: Props) {
     <section className='md:px-20 xxl:mx-auto xxl:w-6/12'>
       <Hero />
 
-      <div className='relative my-10 mx-auto flex w-11/12 flex-col justify-between rounded-lg bg-[#1d1e34] py-10 shadow-lg md:w-11/12 md:flex-row md:p-5 lg:w-8/12'>
+      <div className='relative mt-5 mx-auto flex w-11/12 flex-col justify-between rounded-lg bg-[#1d1e34] py-10 shadow-lg md:w-11/12 md:flex-row md:p-5 lg:w-8/12'>
         <SearchForm />
 
         <div className='mx-2 flex flex-auto items-center md:mx-0 md:flex-none'>
