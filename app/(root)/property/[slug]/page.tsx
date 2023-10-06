@@ -26,7 +26,7 @@ async function Property({ params: { slug } }: Props) {
   console.log(property);
 
   return (
-    <div className='my-10 px-5 md:px-20'>
+    <div className='mb-10 px-5 md:px-20 mt-10 md:mt-20'>
       <div className='flex gap-14 md:flex-row flex-col justify-between'>
         <div className='flex flex-col w-full lg:w-3/5 rounded-md'>
           <Image

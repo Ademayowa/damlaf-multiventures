@@ -2,7 +2,7 @@ export default function HeroPage() {
   return (
     <section className='relative'>
       <div className='mt-10 grid place-items-center px-5 md:mt-20 md:px-20'>
-        <h1 className='max-w-md text-3xl font-bold capitalize tracking-wider text-white md:max-w-3xl md:text-[64px] md:leading-tight'>
+        <h1 className='max-w-lg text-3xl font-bold capitalize tracking-wider text-white lg:max-w-3xl md:text-[64px] md:leading-tight'>
           We can find just the right property for you
         </h1>
         <p className='mt-5 text-lg font-light !leading-normal tracking-wide text-[#8391A6] md:mt-5 md:max-w-2xl md:text-2xl lg:w-9/12'>
