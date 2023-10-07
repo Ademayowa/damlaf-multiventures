@@ -44,9 +44,12 @@ async function Property({ params: { slug } }: Props) {
             />
 
             <div className='text-[#8391A6]'>
-              <h2 className='mt-8 font-normal text-white'>For Rent</h2>
+              <h2 className='mt-8 font-normal text-white'>
+                For {property.category}
+              </h2>
               <h3 className='text-[32px] font-bold my-3'>
-                $ 1,800 <span className='text-base font-normal'>/month</span>
+                ${property.price}{' '}
+                <span className='text-base font-normal'>/month</span>
               </h3>
 
               <div className='flex space-x-9 my-3'>
