@@ -14,7 +14,7 @@ export default function PropertyList({ title, image, slug, price }: Props) {
     <>
       <ClientSideRoute key={title} route={`/property/${slug}`}>
         <Image
-          className='rounded-t-lg'
+          className='rounded-t-lg transform hover:scale-105 transition duration-300'
           src={image}
           alt={title}
           width={400}

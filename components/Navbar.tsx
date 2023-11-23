@@ -5,9 +5,9 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <nav className='md:px-20 px-5 flex items-center pt-8 pb-5 max-w-7xl mx-auto'>
-      <Link href='/'>
+      <Link href='/' className='text-2xl font-bold text-white'>
         {/* <Image src='/damlaf-logo.png' alt='logo' width={200} height={200} /> */}
-        <p className='text-2xl font-bold text-white'>Damlaf Multiventures</p>
+        Find Property
       </Link>
 
       <ul className='hidden flex-1 items-center justify-end md:flex'>
